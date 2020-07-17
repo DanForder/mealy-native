@@ -1,22 +1,23 @@
 import React from "react";
-import { View, StyleSheet, Image } from "react-native";
-
-import Text from "./Text.js";
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 import colors from "../config/colors";
+import Text from "./Text.js";
 
-function Card({ title, subTitle, image }) {
+function Card({ title, subTitle, image, onPress }) {
   return (
-    <View style={styles.card}>
-      <Image style={styles.image} source={image} />
-      <View style={styles.detailsContainer}>
-        <Text style={styles.title} numberOfLines={1}>
-          {title}
-        </Text>
-        <Text style={styles.subTitle} numberOfLines={1}>
-          {subTitle}
-        </Text>
+    <TouchableOpacity onPress={onPress}>
+      <View style={styles.card}>
+        <Image style={styles.image} source={image} />
+        <View style={styles.detailsContainer}>
+          <Text style={styles.title} numberOfLines={1}>
+            {title}
+          </Text>
+          <Text style={styles.subTitle} numberOfLines={1}>
+            {subTitle}
+          </Text>
+        </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 

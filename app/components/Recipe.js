@@ -4,7 +4,7 @@ import CollapsibleList from "./CollapsibleList";
 
 function Recipe({ recipe }) {
   const [ingredientsOpen, setIngredientsOpen] = useState(false);
-  const [methodsOpen, setMethodsOpen] = useState(false);
+  const [methodsOpen, setMethodsOpen] = useState(true);
 
   return (
     <View style={styles.recipe}>

@@ -1,7 +1,11 @@
+import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import RecipesScreen from "./app/screens/RecipesScreen";
-import RecipeDetailsScreen from "./app/screens/RecipeDetailsScreen";
+import AppNavigator from "./app/navigation/AppNavigator";
 
 export default function App() {
-  return <RecipeDetailsScreen />;
+  return (
+    <NavigationContainer>
+      <AppNavigator />
+    </NavigationContainer>
+  );
 }

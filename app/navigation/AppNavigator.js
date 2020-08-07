@@ -1,23 +1,45 @@
-import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
-import RecipeDetailsScreen from "../screens/RecipeDetailsScreen";
-import RecipesScreen from "../screens/RecipesScreen";
+import RecipeNavigator from "./RecipeNavigator";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Screen from "../components/Screen";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => (
-  <Stack.Navigator>
-    <Stack.Screen
-      options={{ title: "Recipes" }}
-      name="RecipeList"
-      component={RecipesScreen}
+  <Tab.Navigator>
+    <Tab.Screen
+      component={RecipeNavigator}
+      name="Recipes"
+      options={{
+        tabBarIcon: ({ size, color }) => (
+          <MaterialCommunityIcons
+            name="food-variant"
+            size={size}
+            color={color}
+          />
+        ),
+      }}
     />
-    <Stack.Screen
-      options={{ title: "Recipe Details" }}
-      name="RecipeDetails"
-      component={RecipeDetailsScreen}
+    <Tab.Screen
+      component={Screen}
+      name="Planner"
+      options={{
+        tabBarIcon: ({ size, color }) => (
+          <MaterialCommunityIcons name="timetable" size={size} color={color} />
+        ),
+      }}
     />
-  </Stack.Navigator>
+    <Tab.Screen
+      component={Screen}
+      name="Settings"
+      options={{
+        tabBarIcon: ({ size, color }) => (
+          <MaterialCommunityIcons name="cogs" size={size} color={color} />
+        ),
+      }}
+    />
+  </Tab.Navigator>
 );
 
 export default AppNavigator;

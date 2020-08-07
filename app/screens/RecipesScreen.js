@@ -81,11 +81,10 @@ const recipes = [
 function RecipesScreen({ navigation }) {
   return (
     <Screen style={styles.screen}>
-      {/* <Text style={styles.header}>Recipes</Text> */}
       <FlatList
-        showsVerticalScrollIndicator={false}
         data={recipes}
         keyExtractor={(recipe) => recipe.id.toString()}
+        numColumns={2}
         renderItem={({ item }) => (
           <Card
             onPress={() => {
@@ -96,6 +95,7 @@ function RecipesScreen({ navigation }) {
             image={item.image}
           />
         )}
+        showsVerticalScrollIndicator={false}
       />
     </Screen>
   );

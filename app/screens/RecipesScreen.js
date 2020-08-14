@@ -1,5 +1,6 @@
 import React from "react";
 import { FlatList, StyleSheet } from "react-native";
+import Button from "../components/Button";
 import Card from "../components/Card";
 import Screen from "../components/Screen";
 import colors from "../config/colors";
@@ -96,6 +97,12 @@ function RecipesScreen({ navigation }) {
           />
         )}
         showsVerticalScrollIndicator={false}
+      />
+      <Button
+        title="Create Recipe"
+        onPress={() => {
+          navigation.navigate("RecipeCreate");
+        }}
       />
     </Screen>
   );

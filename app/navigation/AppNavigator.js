@@ -3,6 +3,7 @@ import RecipeNavigator from "./RecipeNavigator";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Screen from "../components/Screen";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import PlannerScreen from "../screens/PlannerScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -22,7 +23,7 @@ const AppNavigator = () => (
       }}
     />
     <Tab.Screen
-      component={Screen}
+      component={PlannerScreen}
       name="Planner"
       options={{
         tabBarIcon: ({ size, color }) => (

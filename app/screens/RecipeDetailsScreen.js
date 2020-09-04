@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
   detailsContainer: {
     padding: 20,
     paddingBottom: 0,
-    backgroundColor: colors.light,
   },
   image: {
     width: "100%",

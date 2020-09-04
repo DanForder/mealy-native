@@ -62,7 +62,7 @@ function CreateRecipeScreen(props) {
             placeholder="Method"
           />
         </ScrollView>
-        <View style={{ margin: 20, marginTop: 0 }}>
+        <View style={{ marginLeft: 20, marginRight: 20 }}>
           <SubmitButton title="Create Recipe" />
         </View>
       </Form>
@@ -71,9 +71,7 @@ function CreateRecipeScreen(props) {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colors.light,
-  },
+  container: {},
 });
 
 export default CreateRecipeScreen;

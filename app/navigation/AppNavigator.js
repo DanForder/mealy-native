@@ -1,5 +1,6 @@
 import React from "react";
 import RecipeNavigator from "./RecipeNavigator";
+import PlannerNavigator from "./PlannerNavigator";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Screen from "../components/Screen";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
@@ -23,7 +24,7 @@ const AppNavigator = () => (
       }}
     />
     <Tab.Screen
-      component={PlannerScreen}
+      component={PlannerNavigator}
       name="Planner"
       options={{
         tabBarIcon: ({ size, color }) => (

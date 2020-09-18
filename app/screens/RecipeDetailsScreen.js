@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Image, ScrollView, StyleSheet, View } from "react-native";
 import Recipe from "../components/Recipe";
 import Screen from "../components/Screen";
